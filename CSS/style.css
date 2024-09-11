@@ -10,6 +10,7 @@
   --beige: #ffe6c7;
   --text-color: #ffffff;
   --transition: 0.3s;
+  min-width: 100vh;
 }
 /* Variables end */
 
@@ -30,43 +31,3 @@ a {
   text-decoration: none;
 }
 /* CSS Settings end */
-
-/* Navbar */
-nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 2rem;
-  background-color: var(--lightOrange-color);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav img {
-  height: 5rem;
-}
-
-.navigation {
-  list-style-type: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-link {
-  color: var(--black-color);
-  background-color: var(--beige);
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  font-weight: var(--bold-font);
-  transition: var(--transition);
-}
-
-.nav-link:hover {
-  color: var(--text-color);
-  background-color: var(--orange-color);
-  transition: var(--transition);
-}
-/* Navbar ends */
