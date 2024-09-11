@@ -4,14 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <script defer src="JS/scripts.js"></script>
+    <link rel="stylesheet" href="CSS/login.css">
   </head>
   <body>
-    <!-- Navbar -->
-    <div id="navbar"></div>
-
-    <!-- Content -->
-    <h1>THIS IS THE LOGIN PAGE</h1>
-</body>
+  <h2>Pizza F.I.S.T</h2>
+  <div class="container" id="container">
+      <div class="form-container sign-up-container">
+          <form action="#" name="signUpForm">
+              <h1>Se créer un compte</h1>
+              <input class="input" name="firstNameInput" type="text" placeholder="First Name" />
+              <input class="input" name="lastNameInput" type="text" placeholder="Last Name" />
+              <input class="input" name="emailInput" type="email" placeholder="Email" />
+              <input class="input" name="passwordInput" type="password" placeholder="Password" />
+              <input class="button" type="button" value="Allons-y" onclick="sign_up()" />
+          </form>
+      </div>
+      <div class="form-container sign-in-container">
+          <form action="#" name="signInForm">
+              <h1>Se connecter</h1>
+              <input class="input" name="emailInput" type="email" placeholder="Email" />
+              <input class="input" name="passwordInput" type="password" placeholder="Password" />
+              <a href="#">J'ai oublié mon mdp?</a>
+              <input class="button" type="button" value="C'est parti" onclick="sign_in()" />
+          </form>
+      </div>
+      <div class="overlay-container">
+          <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                  <h1>Te re voilà!</h1>
+                  <p>On attendait plus que toi pour venir déguster nos "pizzas"</p>
+                  <input class="button ghost" type="button" value="Se connecter" id="signIn" />
+              </div>
+              <div class="overlay-panel overlay-right">
+                  <h1>Coucou toi!</h1>
+                  <p>Si tu n'es jamais venu ici clique juste en dessous, slurp slurp...</p>
+                  <input class="button ghost" type="button" value="S'inscrire" id="signUp" />
+              </div>
+          </div>
+      </div>
+  </div>
+  <script src="JS/login.js"></script>
+  </body>
 </html>
