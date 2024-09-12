@@ -1,6 +1,7 @@
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
+let user;
 
 signUpButton.addEventListener('click', () => {
     container.classList.add("right-panel-active");
@@ -22,7 +23,10 @@ async function sign_in() {
             }
             if (value.signIn.status === "ok") {
                 console.log(value)
-                window.location.replace("/pizzaFIST/index.html")
+                console.log(user)
+                document.cookie = 'refreshToken=' + value.signIn.refreshToken;
+                document.cookie = 'user=' + emailInput;
+                window.location.replace("/pizzaFIST/totp.html")
             }
         })
 
