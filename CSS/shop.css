@@ -58,6 +58,14 @@ h1 {
     max-width: 500px;
 }
 
+.contaire-pizza span{
+    color: #fff;
+}
+
+.contaire-pizza-room span{
+    color: #000000;
+}
+
 .shop-item img {
     max-width: 100%;
     border-radius: 5px;
@@ -158,7 +166,20 @@ h1 {
     padding: 10px;
 }
 
+.contaire-pizza-room {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
 .contaire-pizza span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.contaire-pizza-room span {
     display: flex;
     align-items: center;
     gap: 3px;
