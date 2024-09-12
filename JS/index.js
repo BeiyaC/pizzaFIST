@@ -114,3 +114,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 1000); // Match this duration with the CSS transition duration
     });
   });
+
