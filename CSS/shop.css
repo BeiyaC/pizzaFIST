@@ -1,0 +1,143 @@
+h1 {
+    text-align: center;
+    position: relative;
+    align-items: center;
+}
+
+.rooms-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: black;
+}
+.rooms-container {
+    text-align: center;
+    color: #fff;
+    padding: 80px 20px;
+    background-color: #242424;
+}
+
+.shop-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+    margin: 20px 0;
+}
+
+.shop-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.shop-item img {
+    max-width: 100%;
+    border-radius: 5px;
+
+}
+
+.shop-item h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.shop-item p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.shop-item button {
+    background-color: #ff6000;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-item button:hover {
+    background-color: #df5600;
+}
+
+.slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Start of subscription CSS */
+
+.sub-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+    margin: 20px 0;
+}
+
+.sub-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.sub-item img {
+    max-width: 100%;
+    border-radius: 5px;
+
+}
+
+.sub-item h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.sub-item p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.sub-item button {
+    background-color: #ff6000;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.sub-item button:hover {
+    background-color: #df5600;
+}
