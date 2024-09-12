@@ -1,7 +1,30 @@
+.body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #242424;
+}
+
 h1 {
     text-align: center;
     position: relative;
     align-items: center;
+}
+
+.page-container {
+    background-color: #242424;
+}
+
+.element-container {
+    width: 90%;
+    margin: 0 auto;
+}
+.sub-page-container {
+    background-color: #ffffff;
+}
+.sub-element-container {
+    width: 90%;
+    margin: 0 auto;
 }
 
 .rooms-wrapper {
@@ -75,12 +98,11 @@ h1 {
     border-radius: 50%;
     color: white;
     cursor: pointer;
-    padding: 5px;
     z-index: 1000;
 }
 
 .slick-prev {
-    left: 10px;
+    left: 5px;
 }
 
 .slick-next {
@@ -94,6 +116,19 @@ h1 {
 
 /* Start of subscription CSS */
 
+.subs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: black;
+}
+.subs-container {
+    text-align: center;
+    color: #242424;
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
 .sub-title {
     width: 100%;
     text-align: center;
@@ -102,7 +137,7 @@ h1 {
 }
 
 .sub-item {
-    background-color: #fff;
+    background-color: #242424;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -124,7 +159,7 @@ h1 {
 
 .sub-item p {
     font-size: 1.2em;
-    color: #333;
+    color: #ffffff;
 }
 
 .sub-item button {
