@@ -61,12 +61,17 @@ h1 {
 .shop-item img {
     max-width: 100%;
     border-radius: 5px;
-
 }
 
 .shop-item h2 {
     font-size: 1.5em;
     margin: 10px 0;
+}
+
+.sub-item img{
+    width: 200px;
+    height: 200px;
+    margin: auto;
 }
 
 .shop-item p {
@@ -145,6 +150,35 @@ h1 {
     padding: 20px;
     text-align: center;
 }
+
+.contaire-pizza {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.contaire-pizza span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+img.pizza{
+    width: 17px;
+    height: auto;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 .sub-item img {
     max-width: 100%;
