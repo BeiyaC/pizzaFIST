@@ -120,7 +120,7 @@ async function validate_token() {
         if (value.validateTotp.status === "ok") {
             successAlert('Token validé, tu peux entrer !')
                 .then(() => {
-                    window.location.replace("/pizzaFIST/aboutUs.html")
+                    window.location.replace("/pizzaFIST/user.html")
                 })
         }
     } catch {
