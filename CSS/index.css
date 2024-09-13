@@ -14,14 +14,6 @@
 
 /* Variables end */
 
-/* CSS Settings */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-family);
-    background-color: var(--black-color);
-}
-
 h1 {
     text-align: center;
     color: var(--beige);
@@ -32,7 +24,6 @@ a {
 }
 
 /* CSS Settings end */
-
 
 /* Index.html */
 
@@ -45,6 +36,7 @@ body {
     align-items: center;
     background-color: var(--black-color);
     position: relative; /* Ensure the body is the reference for absolute positioning */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 body a {
@@ -63,6 +55,7 @@ body button {
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust position to be truly centered */
+    z-index: 3; /* Ensure the button is above the doors and canvas */
 }
 
 body button:hover {
@@ -106,10 +99,6 @@ canvas {
 .right-door {
     transform-origin: right;
     background-position: right center; /* Show the right half of the image */
-}
-
-body button {
-    z-index: 2; /* Ensure the button is above the doors */
 }
 
 .hidden {

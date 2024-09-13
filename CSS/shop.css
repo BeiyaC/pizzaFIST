@@ -199,6 +199,12 @@ img.pizza {
     height: auto;
     animation: spin 5s linear infinite;
 }
+img.pizza-left {
+    width: 17px;
+    height: auto;
+    animation: spin 5s linear infinite;
+    margin-left: 7px;
+}
 
 @keyframes spin {
     0% {
