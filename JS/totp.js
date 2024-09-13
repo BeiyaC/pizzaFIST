@@ -90,7 +90,7 @@ async function verify_token() {
         if (value.verifyTotp.otp_verified === true) {
             successAlert('Bravo tu as le TOTP activé !')
                 .then(() => {
-                    window.location.replace("/pizzaFIST/aboutUs.html")
+                    window.location.replace("/pizzaFIST/user.html")
                 })
         }
     } catch {
