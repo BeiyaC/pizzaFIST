@@ -10,7 +10,7 @@
 .main-block {
     display: grid;
     place-items: center;
-    background: rgba(4, 4, 0, 0.34);
+    background: rgb(255, 230, 201);
     height: 80vh;
 }
 
@@ -88,8 +88,8 @@
     border:none;
     outline:0 !important;
     border-radius: 50px;
-    background: #AB47BC;
-    box-shadow:  28px 28px 57px #933da2,
-    -28px -28px 57px #c351d6;
+    background: #4a2714;
+    box-shadow:  28px 28px 57px #4a2714,
+    -28px -28px 57px #4a2714;
 
 }
