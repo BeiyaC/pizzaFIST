@@ -3,14 +3,17 @@ const returnButton = document.getElementById('return');
 const containerTOTP = document.getElementById('container');
 let qrcode;
 
-generateTokenButton.addEventListener('click', async() => {
+////////////////////////////////// TRIGGER ON CLICK ANIMATION ////////////////////////////////////////////////////////
+
+generateTokenButton.addEventListener('click', () => {
     containerTOTP.classList.add("right-panel-active");
-    await activate_totp()
 });
 
 returnButton.addEventListener('click', () => {
     container.classList.remove("right-panel-active");
 });
+
+////////////////////////////////// MANAGE COOKIES ////////////////////////////////////////////////////////
 
 function getCookies() {
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -26,22 +29,73 @@ function getCookies() {
     return jsonObject
 }
 
+//////////////////////////////////// ALERT BOX LIBRARY //////////////////////////////////////////////////////
+
+function errorAlert(message) {
+    return Swal.fire({
+        title: 'Petit problème',
+        text: message,
+        icon: 'error',
+        confirmButtonText: 'OK'
+    });
+}
+
+function loadingAlert(message) {
+    return Swal.fire({
+        title: message,
+        html: 'Please wait',
+        backdrop: `
+    rgba(0,0,123,0.4)
+    url("https://sweetalert2.github.io/images/nyan-cat.gif")
+    left top
+    no-repeat
+  `,
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        willOpen: () => {
+            Swal.showLoading();
+        },
+    });
+}
+
+function successAlert(message) {
+    return Swal.fire({
+        icon: 'success',
+        title: 'Success!',
+        text: message,
+        timer: 4500,
+        showConfirmButton: false
+    })
+}
+
+
+///////////////////////////////////// MANAGE REQUESTS RESPONSES /////////////////////////////////////////////////////
+
 async function verify_token() {
     const tokenInput = document.forms["activateTotpForm"]["tokenInput"].value
 
     const cookie = getCookies();
 
-    await verify_totp_mutation(cookie.user, tokenInput )
-        .then(value => {
-            if (value === "UNAUTHORIZED") {
-                console.log("oupsi")
-                window.location.replace("/pizzaFIST/totp.html")
-            }
-            if (value.verifyTotp.otp_verified === true) {
+    try {
 
-                window.location.replace("/pizzaFIST/index.html")
-            }
-        })
+        const loading = loadingAlert('Bouge pas on vérifie ton token')
+
+        const value = await verify_totp_mutation(cookie.user, tokenInput )
+
+        loading.close()
+
+        if (value === "ERROR") {
+            errorAlert('Ton token semble faux...')
+        }
+        if (value.verifyTotp.otp_verified === true) {
+            successAlert('Bravo tu as le TOTP activé !')
+                .then(() => {
+                    window.location.replace("/pizzaFIST/aboutUs.html")
+                })
+        }
+    } catch {
+
+    }
 }
 
 async function validate_token() {
@@ -49,37 +103,61 @@ async function validate_token() {
 
     const cookie = getCookies();
 
-    await validate_totp_mutation(cookie.user, tokenInput )
-        .then(value => {
-            if (value === "UNAUTHORIZED") {
-                console.log("oupsi")
-                window.location.replace("/pizzaFIST/totp.html")
-            }
-            if (value.validateTotp.status === "ok") {
+    try {
 
-                window.location.replace("/pizzaFIST/index.html")
-            }
-        })
+        const loading = loadingAlert('Vérification de ton token en cours...')
+
+        const value = await validate_totp_mutation(cookie.user, tokenInput )
+
+        loading.close()
+
+        if (value === "ERROR") {
+            errorAlert('Désolé le token est faux')
+                .then(() => {
+                    window.location.replace("/pizzaFIST/totp.html")
+                })
+        }
+        if (value.validateTotp.status === "ok") {
+            successAlert('Token validé, tu peux entrer !')
+                .then(() => {
+                    window.location.replace("/pizzaFIST/aboutUs.html")
+                })
+        }
+    } catch {
+
+    }
 }
 
 async function activate_totp() {
 
     const cookie = getCookies();
 
-    await enable_totp_mutation(cookie.user)
-        .then(value => {
-            if (value === "UNAUTHORIZED") {
-                console.log("oupsi")
-                window.location.replace("/pizzaFIST/totp.html")
-            }
-            const otpUrl = value.enableTotp.otp_url
-            const otpBase = value.enableTotp.otp_base
+    try {
 
+        const value = await enable_totp_mutation(cookie.user)
+
+        if (value === "UNAUTHORIZED") {
+            errorAlert('Oupsi')
+            window.location.replace("/pizzaFIST/totp.html")
+        }
+        const otpUrl = value.enableTotp.otp_url
+        const otpBase = value.enableTotp.otp_base
+
+        if (!(qrcode instanceof QRCode)) {
             qrcode = new QRCode("qrcode", otpUrl)
+        } else {
+            qrcode.makeCode(otpUrl)
+        }
 
-            document.getElementById("otpBase").innerHTML = otpBase;
-        })
+        document.getElementById("otpBase").innerHTML = otpBase;
+
+
+    } catch {
+
+    }
 }
+
+//////////////////////////////////////// REQUESTS GRAPHQL //////////////////////////////////////////////////
 
 async function validate_totp_mutation(email, token) {
     let results = await fetch('https://pizzafist-api.onrender.com/v2/authentication/graphql/', {

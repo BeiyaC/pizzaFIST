@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Enable TOTP</title>
     <link rel="stylesheet" href="/CSS/totp.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 </head>
@@ -36,7 +37,7 @@
             <div class="overlay-panel overlay-right">
                 <h1>Activer le TOTP</h1>
                 <p>Tu ne l'as pas encore mais pour ta sécurité nous te demandons de le faire. </p>
-                <input class="button ghost" type="button" value="Générer un token" id="generateToken" />
+                <input class="button ghost" type="button" value="Générer un token" id="generateToken" onclick="activate_totp()" />
             </div>
         </div>
     </div>
