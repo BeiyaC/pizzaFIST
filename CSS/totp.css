@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+body{
+    font-family: 'Poppins', sans-serif;
+}
 
 * {
     box-sizing: border-box;
 }
 
-body {
-    background: #f6f5f7;
+.main-block {
+    background: rgba(4, 4, 0, 0.16);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-    margin: -20px 0 50px;
+    font-family: 'Poppins', sans-serif;
+    height: 80vh;
 }
 
 h1 {
@@ -42,9 +44,9 @@ a {
 
 .button {
     border-radius: 20px;
-    border: 1px solid #FF4B2B;
-    background-color: #ff8316;
-    color: #FFFFFF;
+    border: 1px solid #4a2714;
+    background-color: #4a2714;
+    color: #ffffff;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
@@ -85,7 +87,7 @@ form {
     width: 100%;
 }
 
-.container {
+.container-log {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25),
@@ -110,7 +112,7 @@ form {
     z-index: 2;
 }
 
-.container.right-panel-active .sign-in-container {
+.container-log.right-panel-active .sign-in-container {
     transform: translateX(100%);
 }
 
@@ -121,7 +123,7 @@ form {
     z-index: 1;
 }
 
-.container.right-panel-active .sign-up-container {
+.container-log.right-panel-active .sign-up-container {
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -151,14 +153,14 @@ form {
     z-index: 100;
 }
 
-.container.right-panel-active .overlay-container{
+.container-log.right-panel-active .overlay-container{
     transform: translateX(-100%);
 }
 
 .overlay {
-    background: #FF416C;
-    background: -webkit-linear-gradient(to right, #ffdc2b, #ff8316);
-    background: linear-gradient(to right, #ffdc2b, #ff8316);
+    background: #ff8316;
+    background: -webkit-linear-gradient(to right, #000000, #ff8316);
+    background: linear-gradient(to right, #fea55b, #000000);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -171,7 +173,7 @@ form {
     transition: transform 0.6s ease-in-out;
 }
 
-.container.right-panel-active .overlay {
+.container-log.right-panel-active .overlay {
     transform: translateX(50%);
 }
 
@@ -194,7 +196,7 @@ form {
     transform: translateX(-20%);
 }
 
-.container.right-panel-active .overlay-left {
+.container-log.right-panel-active .overlay-left {
     transform: translateX(0);
 }
 
@@ -203,7 +205,7 @@ form {
     transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right {
+.container-log.right-panel-active .overlay-right {
     transform: translateX(20%);
 }
 
@@ -220,29 +222,4 @@ form {
     margin: 0 5px;
     height: 40px;
     width: 40px;
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: red;
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
 }
