@@ -18,7 +18,7 @@ returnButton.addEventListener('click', () => {
 function getCookies() {
     let decodedCookie = decodeURIComponent(document.cookie);
 
-    decodedCookie =decodedCookie.split(';');
+    decodedCookie = decodedCookie.split(';');
 
     const jsonObject = decodedCookie.reduce((obj, item) => {
         const [key, value] = item.trim().split('=');
@@ -80,7 +80,7 @@ async function verify_token() {
 
         const loading = loadingAlert('Bouge pas on vérifie ton token')
 
-        const value = await verify_totp_mutation(cookie.user, tokenInput )
+        const value = await verify_totp_mutation(cookie.user, tokenInput)
 
         loading.close()
 
@@ -107,7 +107,7 @@ async function validate_token() {
 
         const loading = loadingAlert('Vérification de ton token en cours...')
 
-        const value = await validate_totp_mutation(cookie.user, tokenInput )
+        const value = await validate_totp_mutation(cookie.user, tokenInput)
 
         loading.close()
 
@@ -148,9 +148,9 @@ async function activate_totp() {
                 text: otpUrl,
                 width: 220,
                 height: 220,
-                colorDark : "#000000",
-                colorLight : "#ffffff",
-                correctLevel : QRCode.CorrectLevel.H
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
             })
         } else {
             qrcode.makeCode(otpUrl)
@@ -190,7 +190,7 @@ async function validate_totp_mutation(email, token) {
     })
     let result = await results.json();
 
-    if(result.data !== null) {
+    if (result.data !== null) {
         return result.data
     } else {
         return "ERROR"
@@ -220,7 +220,7 @@ async function enable_totp_mutation(email) {
         })
     })
     let result = await results.json();
-    if(result.data !== null) {
+    if (result.data !== null) {
         return result.data
     } else {
         return "ERROR"
@@ -252,7 +252,7 @@ async function verify_totp_mutation(email, token) {
     })
     let result = await results.json();
 
-    if(result.data !== null) {
+    if (result.data !== null) {
         return result.data
     } else {
         return "ERROR"

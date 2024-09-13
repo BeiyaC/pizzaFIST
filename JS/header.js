@@ -1,18 +1,18 @@
 ///// surligne nav bar /////////
-window.onload = function() {
+window.onload = function () {
     const currentPath = window.location.pathname; // Obtenir l'URL de la page
     if (currentPath.includes('about')) {
-      highlightMenu('about-link');
+        highlightMenu('about-link');
     } else if (currentPath.includes('rooms')) {
-      highlightMenu('rooms-link');
+        highlightMenu('rooms-link');
     } else if (currentPath.includes('plans')) {
-      highlightMenu('plans-link');
+        highlightMenu('plans-link');
     } else if (currentPath.includes('shop')) {
-      highlightMenu('shop-link');
+        highlightMenu('shop-link');
     } else if (currentPath.includes('login')) {
-      highlightMenu('login-link');
+        highlightMenu('login-link');
     }
-  };
+};
 
 // Loading the navbar
 function loadNavbar() {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', loadNavbar);
 function highlightMenu(activeLinkId) {
     // Supprimer la classe 'nav-item-active' de tous les éléments de navigation
     let navItems = document.querySelectorAll('.nav-item');
-    navItems.forEach(function(item) {
+    navItems.forEach(function (item) {
         item.classList.remove('nav-item-active');
     });
 
@@ -43,5 +43,5 @@ function highlightMenu(activeLinkId) {
 var toggleButton = document.querySelector('.toggle-menu');
 var navBar = document.querySelector('.nav-bar');
 toggleButton.addEventListener('click', function () {
-	navBar.classList.toggle('toggle');
+    navBar.classList.toggle('toggle');
 });

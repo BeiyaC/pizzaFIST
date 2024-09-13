@@ -53,7 +53,6 @@ function successAlert(message) {
 }
 
 
-
 ///////////////////////////////////// MANAGE REQUESTS RESPONSES /////////////////////////////////////////////////////
 
 async function sign_in() {
@@ -73,11 +72,11 @@ async function sign_in() {
         } else if (value.signIn.status === "ok") {
             successAlert('Connexion à ton compte réussie')
                 .then(() => {
-                    document.cookie = 'refreshToken=' + value.signIn.refreshToken;
-                    document.cookie = 'user=' + emailInput;
-                    window.location.replace("/pizzaFIST/totp.html")
-                }
-            )
+                        document.cookie = 'refreshToken=' + value.signIn.refreshToken;
+                        document.cookie = 'user=' + emailInput;
+                        window.location.replace("/pizzaFIST/totp.html")
+                    }
+                )
         }
     } catch {
 
@@ -102,8 +101,7 @@ async function sign_up() {
 
         if (value === "ERROR") {
             errorAlert('Il y a un souci dans les champs que tu as remplis')
-        } else
-        if (value.createAccount.status === "ok") {
+        } else if (value.createAccount.status === "ok") {
             successAlert('Création de ton compte réussi, tu vas pouvoir te connecter')
                 .then(() => {
                         window.location.replace("/pizzaFIST/login.html")
@@ -145,7 +143,7 @@ async function create_account_mutation(firstName, lastName, email, password) {
     })
     let result = await results.json();
 
-    if(result.data.createAccount !== null) {
+    if (result.data.createAccount !== null) {
         return result.data
     } else {
         return "ERROR"
@@ -178,7 +176,7 @@ async function sign_in_mutation(email, password) {
 
     let result = await results.json();
 
-    if(result.data !== null) {
+    if (result.data !== null) {
         return result.data
     } else {
         return "UNAUTHORIZED"

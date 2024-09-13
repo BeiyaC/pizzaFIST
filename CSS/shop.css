@@ -19,9 +19,11 @@ h1 {
     width: 90%;
     margin: 0 auto;
 }
+
 .sub-page-container {
     background-color: #ffffff;
 }
+
 .sub-element-container {
     width: 90%;
     margin: 0 auto;
@@ -33,6 +35,7 @@ h1 {
     justify-content: space-around;
     color: black;
 }
+
 .rooms-container {
     text-align: center;
     color: #fff;
@@ -58,11 +61,11 @@ h1 {
     max-width: 500px;
 }
 
-.contaire-pizza span{
+.contaire-pizza span {
     color: #fff;
 }
 
-.contaire-pizza-room span{
+.contaire-pizza-room span {
     color: #000000;
 }
 
@@ -76,7 +79,7 @@ h1 {
     margin: 10px 0;
 }
 
-.sub-item img{
+.sub-item img {
     width: 200px;
     height: 200px;
     margin: auto;
@@ -135,6 +138,7 @@ h1 {
     justify-content: space-around;
     color: black;
 }
+
 .subs-container {
     text-align: center;
     color: #242424;
@@ -185,7 +189,7 @@ h1 {
     gap: 3px;
 }
 
-img.pizza{
+img.pizza {
     width: 17px;
     height: auto;
     animation: spin 5s linear infinite;

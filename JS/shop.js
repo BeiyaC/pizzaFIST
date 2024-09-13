@@ -6,7 +6,7 @@ $('.rooms-wrapper').slick({
     autoplaySpeed: 2000,
     nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
     prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>'
-  });
+});
 
 $('.subs-wrapper').slick({
     infinite: false,
@@ -14,4 +14,4 @@ $('.subs-wrapper').slick({
     slidesToScroll: 1,
     nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
     prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>'
-  });
+});

@@ -1,33 +1,35 @@
 /* Variables */
 :root {
-  --font-family: Arial, sans-serif;
-  --normal-font: 400;
-  --bold-font: 700;
-  --bolder-font: 900;
-  --orange-color: #ff6000;
-  --lightOrange-color: #ffa559;
-  --black-color: #454545;
-  --beige: #ffe6c7;
-  --text-color: #ffffff;
-  --transition: 0.3s;
-  min-width: 100vh;
+    --font-family: Arial, sans-serif;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --orange-color: #ff6000;
+    --lightOrange-color: #ffa559;
+    --black-color: #454545;
+    --beige: #ffe6c7;
+    --text-color: #ffffff;
+    --transition: 0.3s;
+    min-width: 100vh;
 }
+
 /* Variables end */
 
 /* CSS Settings */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-family);
-  background-color: var(--black-color);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--black-color);
 }
 
 h1 {
-  text-align: center;
-  color: var(--beige);
+    text-align: center;
+    color: var(--beige);
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 /* CSS Settings end */

@@ -1,4 +1,3 @@
-
 export async function check_account(email) {
 
 }
@@ -22,7 +21,7 @@ async function get_account_resolver() {
 
     let result = await results.json();
 
-    if(result.data !== null) {
+    if (result.data !== null) {
         return result.data
     } else {
         return "ERROR"
@@ -32,7 +31,7 @@ async function get_account_resolver() {
 function getCookies() {
     let decodedCookie = decodeURIComponent(document.cookie);
 
-    decodedCookie =decodedCookie.split(';');
+    decodedCookie = decodedCookie.split(';');
 
     const jsonObject = decodedCookie.reduce((obj, item) => {
         const [key, value] = item.trim().split('=');

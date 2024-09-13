@@ -17,16 +17,16 @@
         <div class="form-container sign-up-container">
             <form action="#" name="activateTotpForm">
                 <h1>Vérifie ton token</h1>
-                <input class="input" name="tokenInput" type="text" placeholder="Token" />
-                <input class="button" type="button" value="Allons-y" onclick="verify_token()" />
+                <input class="input" name="tokenInput" type="text" placeholder="Token"/>
+                <input class="button" type="button" value="Allons-y" onclick="verify_token()"/>
             </form>
         </div>
         <div class="form-container sign-in-container">
             <form action="#" name="validateTotpForm">
                 <h1>Token Code</h1>
-                <input class="input" name="tokenInput" type="text" placeholder="Token Code" />
+                <input class="input" name="tokenInput" type="text" placeholder="Token Code"/>
                 <a href="#">J'ai perdu mon accés à mon gestionnaire de token</a>
-                <input class="button" type="button" value="C'est parti" onclick="validate_token()" />
+                <input class="button" type="button" value="C'est parti" onclick="validate_token()"/>
             </form>
         </div>
         <div class="overlay-container">
@@ -35,13 +35,14 @@
                     <h1>Scan moi ça</h1>
                     <div id="qrcode"></div>
                     <p id="otpBase">On attendait plus que toi pour venir déguster nos "pizzas"</p>
-                    <input class="button ghost" type="button" value="En faite j'ai déjà un token" id="return" />
+                    <input class="button ghost" type="button" value="En faite j'ai déjà un token" id="return"/>
 
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Activer le TOTP</h1>
                     <p>Tu ne l'as pas encore mais pour ta sécurité nous te demandons de le faire. </p>
-                    <input class="button ghost" type="button" value="Générer un token" id="generateToken" onclick="activate_totp()" />
+                    <input class="button ghost" type="button" value="Générer un token" id="generateToken"
+                           onclick="activate_totp()"/>
                 </div>
             </div>
         </div>

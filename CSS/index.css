@@ -10,62 +10,65 @@
     --beige: #ffe6c7;
     --text-color: #ffffff;
     --transition: 0.3s;
-  }
-  /* Variables end */
-  
-  /* CSS Settings */
-  body {
+}
+
+/* Variables end */
+
+/* CSS Settings */
+body {
     margin: 0;
     padding: 0;
     font-family: var(--font-family);
     background-color: var(--black-color);
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
     color: var(--beige);
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
-  }
-  /* CSS Settings end */
+}
+
+/* CSS Settings end */
 
 
 /* Index.html */
 
 body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--black-color); 
-  position: relative; /* Ensure the body is the reference for absolute positioning */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-color);
+    position: relative; /* Ensure the body is the reference for absolute positioning */
 }
 
 body a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 body button {
-  padding: 20px 40px;
-  font-size: 24px;
-  background-color: var(--orange-color);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  position: absolute; /* Position the button absolutely */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust position to be truly centered */
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: var(--orange-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Position the button absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to be truly centered */
 }
 
 body button:hover {
-  background-color: #df5500;
+    background-color: #df5500;
 }
+
 canvas {
     position: absolute;
     top: 0;
@@ -73,43 +76,44 @@ canvas {
     width: 100%;
     height: 100%;
     z-index: 2; /* Ensure the canvas is above the doors but below the button */
-  }
+}
 
 /* DOOR */
 
 .door-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 1;
 }
 
 .door {
-  width: 50%;
-  height: 100%;
-  background: url('../ASSETS/Entre.webp') no-repeat center center;
-  background-size: 200% 100%; /* Double the width to split the image */
-  transition: transform 1s ease;
+    width: 50%;
+    height: 100%;
+    background: url('../ASSETS/Entre.webp') no-repeat center center;
+    background-size: 200% 100%; /* Double the width to split the image */
+    transition: transform 1s ease;
 }
 
 .left-door {
-  transform-origin: left;
-  background-position: left center; /* Show the left half of the image */
+    transform-origin: left;
+    background-position: left center; /* Show the left half of the image */
 }
 
 .right-door {
-  transform-origin: right;
-  background-position: right center; /* Show the right half of the image */
+    transform-origin: right;
+    background-position: right center; /* Show the right half of the image */
 }
 
 body button {
-  z-index: 2; /* Ensure the button is above the doors */
+    z-index: 2; /* Ensure the button is above the doors */
 }
+
 .hidden {
     display: none;
-  }
+}
 
 /* Index.html end */
