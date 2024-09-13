@@ -144,7 +144,14 @@ async function activate_totp() {
         const otpBase = value.enableTotp.otp_base
 
         if (!(qrcode instanceof QRCode)) {
-            qrcode = new QRCode("qrcode", otpUrl)
+            qrcode = new QRCode("qrcode", {
+                text: otpUrl,
+                width: 220,
+                height: 220,
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            })
         } else {
             qrcode.makeCode(otpUrl)
         }

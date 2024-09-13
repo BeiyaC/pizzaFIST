@@ -223,3 +223,7 @@ form {
     height: 40px;
     width: 40px;
 }
+
+#otpBase, #qrcode {
+    margin-top: 15px;
+}
