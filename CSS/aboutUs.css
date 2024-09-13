@@ -10,17 +10,6 @@ body {
     height: 100%;
 }
 
-h1 {
-    font: 700 2.8em/1.2 "Droid Sans", sans-serif;
-    color: #FF6000;
-}
-
-h2 {
-    font: 700 1.5em/1.5 "Droid Sans", sans-serif;
-    margin: 1em 0;
-}
-
-
 #banner {
     background: url(../ASSETS/OIG4.webp) no-repeat fixed center center;
     background-color: #26272b;
