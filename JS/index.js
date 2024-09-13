@@ -102,18 +102,19 @@ setInterval(loop, 1000 / 60);
 /* door animations */
 
 document.addEventListener('DOMContentLoaded', function () {
-    const button = document.querySelector('a[href="aboutUs.html"]');
+    const button = document.querySelector('a[href="./aboutUs.html"] button');
     const leftDoor = document.querySelector('.left-door');
     const rightDoor = document.querySelector('.right-door');
+    const link = document.querySelector('a[href="./aboutUs.html"]');
 
     button.addEventListener('click', function (event) {
         event.preventDefault();
-        button.querySelector('button').classList.add('hidden'); // Hide the button
+        button.classList.add('hidden'); // Hide the button
         leftDoor.style.transform = 'translateX(-100%)';
         rightDoor.style.transform = 'translateX(100%)';
 
         setTimeout(() => {
-            window.location.href = button.href;
+            window.location.href = link.href;
         }, 1000); // Match this duration with the CSS transition duration
     });
 });
