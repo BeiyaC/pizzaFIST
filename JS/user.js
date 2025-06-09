@@ -94,7 +94,7 @@ async function get_account() {
 //////////////////////////////////////// REQUESTS GRAPHQL //////////////////////////////////////////////////
 
 async function get_account_resolver(email) {
-    let results = await fetch('https://pizzafist-api.onrender.com/v2/authentication/graphql/', {
+    let results = await fetch('https://127.0.0.1:8000/v2/authentication/graphql/', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
