@@ -118,7 +118,7 @@ async function sign_up() {
 //////////////////////////////////////// REQUESTS GRAPHQL //////////////////////////////////////////////////
 
 async function create_account_mutation(firstName, lastName, email, password) {
-    let results = await fetch('https://127.0.0.1:8000/v2/authentication/graphql/', {
+    let results = await fetch('http://127.0.0.1:8000/v2/authentication/graphql/', {
         method: 'POST',
 
         headers: {
@@ -151,7 +151,7 @@ async function create_account_mutation(firstName, lastName, email, password) {
 }
 
 async function sign_in_mutation(email, password) {
-    let results = await fetch('https://127.0.0.1:8000/v2/authentication/graphql/', {
+    let results = await fetch('http://127.0.0.1:8000/v2/authentication/graphql/', {
         method: 'POST',
 
         headers: {
