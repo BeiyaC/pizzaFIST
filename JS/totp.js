@@ -167,7 +167,7 @@ async function activate_totp() {
 //////////////////////////////////////// REQUESTS GRAPHQL //////////////////////////////////////////////////
 
 async function validate_totp_mutation(email, token) {
-    let results = await fetch('https://pizzafist-api.onrender.com/v2/authentication/graphql/', {
+    let results = await fetch('http://127.0.0.1:8000/v2/authentication/graphql/', {
         method: 'POST',
 
         headers: {
@@ -198,7 +198,7 @@ async function validate_totp_mutation(email, token) {
 }
 
 async function enable_totp_mutation(email) {
-    let results = await fetch('https://pizzafist-api.onrender.com/v2/authentication/graphql/', {
+    let results = await fetch('http://127.0.0.1:8000/v2/authentication/graphql/', {
         method: 'POST',
 
         headers: {
@@ -228,7 +228,7 @@ async function enable_totp_mutation(email) {
 }
 
 async function verify_totp_mutation(email, token) {
-    let results = await fetch('https://pizzafist-api.onrender.com/v2/authentication/graphql/', {
+    let results = await fetch('http://127.0.0.1:8000/v2/authentication/graphql/', {
         method: 'POST',
 
         headers: {
